@@ -1,0 +1,47 @@
+.h1-login {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.anmelden {
+  display: flex;
+  flex-direction: column;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-relative-container {
+  position: relative;
+  @include center-all();
+}
+
+form i {
+  position: absolute;
+  left: 1rem;
+  font-size: 1.1rem;
+}
+
+form input {
+  width: 100%;
+  padding: 0.6rem 0;
+  border: 3px solid var(--global--color-black);
+  border-radius: 30px;
+  font-size: 16px;
+  padding-left: 2.5rem;
+}
+
+.check {
+  display: flex;
+  flex-direction: row;
+}
+
+.check input {
+  width: auto;
+}
+
+.btn-anmelden {
+  @include button-standard(200px);
+}

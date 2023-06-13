@@ -29,8 +29,8 @@
       </ul>
     </nav>
     <main>
-      <form action="">
-        <h1 class="h1-login">Mein Konto</h1>
+      <h1 class="h1-login">Mein Konto</h1>
+      <form action="" class="form-login">
         <article class="anmelden">
           <h2>Anmelden</h2>
           
@@ -44,14 +44,42 @@
               <i class="fa-regular fa-envelope"></i>
               <input type="password" name="password" id="password">
             </div>
-            <div>
-
+            <div class="check">
               <input type="checkbox" name="check-anmelden" id="check-anmelden">
               <label for="check-anmelden">Angemeldet bleiben</label>
             </div>
-          
+          <div>
+            <button class="btn-anmelden">
+              Anmelden
+            </button>
+            <a href="#">Passwort vergessen?</a>
+          </div>
         </article>
-        <article class="registrieren"></article>
+        <article class="registrieren">
+          <h2>Registrieren</h2>
+          
+            <label for="email">Benutzer oder E-Mail Adresse *</label>
+            <div class="icon-relative-container">
+              <i class="fa-regular fa-envelope"></i>
+              <input type="email" name="email" id="email">
+            </div>
+            <label for="password">Passwort</label>
+            <div class="icon-relative-container">
+              <i class="fa-regular fa-envelope"></i>
+              <input type="password" name="password" id="password">
+            </div>
+            <div class="check">
+              <input type="checkbox" name="check-anmelden" id="check-anmelden">
+              <label for="check-anmelden">Angemeldet bleiben</label>
+            </div>
+          <div>
+            <button class="btn-anmelden">
+              Registrieren
+            </button>
+            <a href="#">Passwort vergessen?</a>
+          </div>
+
+        </article>
       </form>
     </main>
   </header></body>

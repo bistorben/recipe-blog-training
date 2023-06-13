@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -19,50 +20,34 @@
   --global--color-neon-blue: #1d0ba8;
   --global--color-darker-pink: #f9b;
   --global--color-red-links: #ff667d;
-
   --spacing-m: 1rem;
   --spacing-l: 2rem;
 }
-
-/* FONTS */
 
 @font-face {
   font-family: ArticulatCF-Normal;
   src: url(./fonts/ArticulatCF-Normal.ttf);
 }
-
 @font-face {
   font-family: ArticulatCF-Bold;
   src: url(./fonts/ArticulatCF-Bold.otf);
 }
-
 @font-face {
   font-family: CartograpgCF-Bold;
   src: url(./fonts/CartographCF-ExtraBold.ttf);
 }
-
 @font-face {
   font-family: CartograpgCF-Light;
   src: url(./fonts/CartographCF-Light.ttf);
 }
-
 @font-face {
   font-family: CF-BoldOblique;
   src: url(./fonts/ArticulatCF-BoldOblique.ttf);
 }
-
 /* GLOBAL */
-
 body {
   background-image: url(./images/background.png);
   background-size: cover;
-}
-
-main {
-  /* padding: 0 1rem 1rem 1rem; */
-  /* max-width: 1200px; */
-  /* margin: 0 auto;
-  grid-template: 5% 1fr 5%; */
 }
 
 .container-center {
@@ -71,42 +56,33 @@ main {
 }
 
 /* HEADER --------------------------------- */
-
 header {
   padding: 3rem 1rem;
   color: var(--global--color-black);
-  /* border: 1px solid red; */
 }
-
 header i {
   color: black;
 }
-
 header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 header ul {
   display: flex;
   justify-content: space-between;
   list-style-type: none;
   width: 100px;
-  /* border: 1px solid red; */
 }
-
 header .burger {
   font-size: 2.2rem;
 }
-
 header .logo {
   width: 90px;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
 }
-
 header ul a > i {
   font-size: 18px;
 }
@@ -114,13 +90,12 @@ header ul a > i {
 /* hero teaser */
 /* Todo: check every line of code again */
 /* Todo: exact content fit on each vw */
-
 .hero-teaser {
-  overflow: hidden;
-  margin-top: 0;
   border: 0.2rem solid var(--global--color-black);
   box-shadow: 0.2rem 0.2rem 0 var(--global--color-black);
   border-radius: 10px;
+  overflow: hidden;
+  margin-top: 0;
   max-width: 1100px;
 }
 
@@ -134,9 +109,9 @@ header ul a > i {
 
 .hero-content {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   gap: 1rem;
 }
 
@@ -167,10 +142,10 @@ h1 {
 }
 
 /* swipe heading */
-
 .swipe {
   font-family: CartograpgCF-Bold;
   font-size: 1.7rem;
+  width: -moz-fit-content;
   width: fit-content;
   margin: 1rem auto;
   color: #1d0ba8;
@@ -195,7 +170,6 @@ h1 {
 }
 
 /* teaser collection */
-
 .teaser-collection {
   max-width: 1100px;
   display: flex;
@@ -204,7 +178,6 @@ h1 {
 }
 
 /* ? Ich würde gerne dem arcticle ne feste breite/höhe, statt dem img geben. Was muss ich tun? :) */
-
 .teaser-collection article {
   height: 100%;
   overflow: hidden;
@@ -225,7 +198,8 @@ h1 {
 .teaser-collection img {
   width: 200px;
   height: 250px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   display: block;
   transition: 0.5s ease;
 }
@@ -254,25 +228,26 @@ h1 {
 }
 
 .button {
-  width: 100%;
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.button button {
+.button > .btn-mehr {
+  border: 0.2rem solid var(--global--color-black);
+  box-shadow: 0.2rem 0.2rem 0 var(--global--color-black);
+  border-radius: 10px;
   width: 320px;
+  background-color: white;
   margin: 2rem 0;
   padding: 0.7rem;
   border-radius: 30px;
   font-family: CF-BoldOblique;
   text-transform: uppercase;
   word-spacing: 0.3rem;
-  background-color: var(--global--color-white);
-  border: 0.2rem solid var(--global--color-black);
-  box-shadow: 0.2rem 0.2rem 0 var(--global--color-black);
 }
 
-button::after {
+.btn-mehr::after {
   content: "\f061";
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
@@ -281,7 +256,6 @@ button::after {
 }
 
 /* SEARCH -------------------------------------------------------------- */
-
 .search {
   background-color: var(--global--color-illusion);
   height: 300px;
@@ -305,8 +279,9 @@ button::after {
 }
 
 .search .container-relative {
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
 }
 
@@ -326,7 +301,6 @@ button::after {
 }
 
 /* CSS LOGIN */
-
 .h1-login {
   text-align: center;
   margin-top: 3rem;
@@ -344,8 +318,9 @@ form div {
 
 .icon-relative-container {
   position: relative;
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 form i {
@@ -363,99 +338,104 @@ form input {
   padding-left: 2.5rem;
 }
 
-.anmelden div:nth-of-type(3) {
+.check {
   display: flex;
+  flex-direction: row;
+}
+
+.check input {
+  width: auto;
+}
+
+.btn-anmelden {
+  border: 0.2rem solid var(--global--color-black);
+  box-shadow: 0.2rem 0.2rem 0 var(--global--color-black);
+  border-radius: 10px;
+  width: 200px;
+  background-color: white;
+  margin: 2rem 0;
+  padding: 0.7rem;
+  border-radius: 30px;
+  font-family: CF-BoldOblique;
+  text-transform: uppercase;
+  word-spacing: 0.3rem;
 }
 
 /* MEDIA QUERIES ------------------------------- */
-
 @media screen and (min-width: 768px) {
   /* HIDE SWIPE Headline */
-
   .swipe {
     display: none;
   }
-
   .hero-teaser img {
     /* object-fit: cover; */
     /* min-height: 400px; */
   }
-
   /* new styling for teaser collection ------------------------ */
-
   .teaser-collection {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: auto;
-    grid-template-areas:
-      "top-left top-left top-left top-right top-right top-right"
-      "bot-left bot-left bot-mid bot-mid bot-right bot-right";
+    grid-template-areas: "top-left top-left top-left top-right top-right top-right" "bot-left bot-left bot-mid bot-mid bot-right bot-right";
     margin-top: 2rem;
     gap: 2rem;
     overflow-x: unset;
   }
-
   .teaser-collection article {
     width: 100%;
   }
-
   .teaser-collection img {
     width: 100%;
   }
-
   #teaser-item1 {
     grid-area: top-left;
   }
-
   #teaser-item2 {
     grid-area: top-right;
   }
-
   #teaser-item3 {
     grid-area: bot-left;
   }
-
   #teaser-item4 {
     grid-area: bot-mid;
   }
-
   #teaser-item4 {
     grid-area: bot-mid;
   }
-
   #teaser-item5 {
     grid-area: bot-right;
   }
-
   .swipe {
     display: none;
   }
+  .form-login {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .anmelden,
+  .registrieren {
+    width: 40%;
+  }
 }
-
 @media screen and (min-width: 1000px) {
   .hero-teaser article {
     display: flex;
     justify-content: center;
     align-items: stretch;
   }
-
   .swipe {
     display: none;
   }
-
   .teaser-collection img {
     height: 350px;
   }
-
   /* .container-center {
     margin: 0 auto;
   } */
 }
-
 @media screen and (min-width: 1400px) {
   .teaser-collection {
-    grid-template-areas:
-      "top-left top-left top-right top-right top-right top-right"
-      "bot-left bot-left bot-mid bot-mid bot-right bot-right";
+    grid-template-areas: "top-left top-left top-right top-right top-right top-right" "bot-left bot-left bot-mid bot-mid bot-right bot-right";
   }
-}
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,404 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --global--color-black: #040606;
+  --global--color-grey: grey;
+  --global--color-white: #fff;
+  --global--color-white-50: rbga(255, 255, 0.5);
+  --global--color-white-90: rbga(255, 255, 0.9);
+  --global--color-linen: #fcf7f3;
+  --global--color-pearl-lusta: #fcedd9;
+  --global--color-illusion: #ffb8c2;
+  --global--color-chestnut: #be5a4b;
+  --global--color-flush-orange: #ff8000;
+  --global--color-tomato: tomato;
+  --global--color-neon-blue: #1d0ba8;
+  --global--color-darker-pink: #f9b;
+  --global--color-red-links: #ff667d;
+
+  --spacing-m: 1rem;
+  --spacing-l: 2rem;
+}
+
+@import "fonts";
+
+/* GLOBAL */
+
+body {
+  background-image: url(./images/background.png);
+  background-size: cover;
+}
+
+@mixin center-all() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-center {
+  width: 95%;
+  margin: 0 auto;
+}
+
+/* HEADER --------------------------------- */
+
+header {
+  padding: 3rem 1rem;
+  color: var(--global--color-black);
+
+  i {
+    color: black;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    width: 100px;
+  }
+
+  .burger {
+    font-size: 2.2rem;
+  }
+
+  .logo {
+    width: 90px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  ul a > i {
+    font-size: 18px;
+  }
+}
+
+/* hero teaser */
+/* Todo: check every line of code again */
+/* Todo: exact content fit on each vw */
+
+@mixin border-black() {
+  border: 0.2rem solid var(--global--color-black);
+  box-shadow: 0.2rem 0.2rem 0 var(--global--color-black);
+  border-radius: 10px;
+}
+
+.hero-teaser {
+  @include border-black();
+  overflow: hidden;
+  margin-top: 0;
+  max-width: 1100px;
+}
+
+.hero-content-wrapper {
+  padding: 2rem;
+  position: relative;
+  background-color: var(--global--color-linen);
+  z-index: 1;
+  display: flex;
+}
+
+.hero-content {
+  @include center-all();
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hero-teaser img {
+  width: 100%;
+  transition: 0.5s ease;
+}
+
+.hero-teaser img {
+  display: block;
+  /* border-top-right-radius: 10px;
+  border-top-left-radius: 10px; */
+}
+
+.hero-teaser:hover img {
+  transform: scale(1.05);
+  transition: 0.5s ease;
+}
+
+h1 {
+  font-size: 40px;
+  font-family: ArticulatCF-Bold;
+  line-height: 1;
+}
+
+.hero-teaser p {
+  font-family: ArticulatCF-Normal;
+}
+
+/* swipe heading */
+
+.swipe {
+  font-family: CartograpgCF-Bold;
+  font-size: 1.7rem;
+  width: fit-content;
+  margin: 1rem auto;
+  color: #1d0ba8;
+}
+
+.swipe article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.swipe p {
+  font-size: 1rem;
+}
+
+.swipe h2::after {
+  content: "\f0a4";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 1.9rem;
+  margin-left: 1rem;
+}
+
+/* teaser collection */
+
+.teaser-collection {
+  max-width: 1100px;
+  display: flex;
+  gap: 1rem;
+  overflow-x: scroll;
+}
+
+/* ? Ich würde gerne dem arcticle ne feste breite/höhe, statt dem img geben. Was muss ich tun? :) */
+
+.teaser-collection article {
+  height: 100%;
+  overflow: hidden;
+  @include border-black();
+}
+
+.teaser-collection article:hover img {
+  transform: scale(1.05);
+  transition: 0.5s ease;
+}
+
+.teaser-collection figure {
+  position: relative;
+}
+
+.teaser-collection img {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  transition: 0.5s ease;
+}
+
+.teaser-collection figcaption {
+  position: absolute;
+  bottom: 0;
+  background-color: #040606;
+  font-family: CartograpgCF-Light;
+  font-size: 10px;
+  color: #fcf7f3;
+  padding: 0.2rem;
+  text-transform: uppercase;
+}
+
+.h2-background {
+  background-color: var(--global--color-linen);
+  position: relative;
+}
+
+.teaser-collection h2 {
+  font-family: ArticulatCF-Bold;
+  font-size: 1rem;
+  padding: 1rem 1rem;
+  line-height: 1;
+}
+
+.button {
+  @include center-all();
+}
+
+@mixin button-standard($width) {
+  @include border-black();
+  width: $width;
+  background-color: white;
+  margin: 2rem 0;
+  padding: 0.7rem;
+  border-radius: 30px;
+  font-family: CF-BoldOblique;
+  text-transform: uppercase;
+  word-spacing: 0.3rem;
+}
+
+.button > .btn-mehr {
+  @include button-standard(320px);
+}
+
+.btn-mehr::after {
+  content: "\f061";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+
+/* SEARCH -------------------------------------------------------------- */
+
+.search {
+  background-color: var(--global--color-illusion);
+  height: 300px;
+  @include center-all();
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.search h2 {
+  font-family: ArticulatCF-Bold;
+  font-size: 52px;
+  text-align: center;
+  width: 100%;
+}
+
+.input-wrapper {
+  width: 95%;
+  max-width: 900px;
+}
+
+.search .container-relative {
+  @include center-all();
+  position: relative;
+}
+
+.search input {
+  text-align: center;
+  padding: 1rem 0;
+  border: 3px solid var(--global--color-black);
+  border-radius: 30px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.search label {
+  font-size: 1.5rem;
+  position: absolute;
+  left: 1rem;
+}
+
+/* CSS LOGIN */
+
+@import "login";
+
+/* MEDIA QUERIES ------------------------------- */
+
+@media screen and (min-width: 768px) {
+  /* HIDE SWIPE Headline */
+
+  .swipe {
+    display: none;
+  }
+
+  .hero-teaser img {
+    /* object-fit: cover; */
+    /* min-height: 400px; */
+  }
+
+  /* new styling for teaser collection ------------------------ */
+
+  .teaser-collection {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      "top-left top-left top-left top-right top-right top-right"
+      "bot-left bot-left bot-mid bot-mid bot-right bot-right";
+    margin-top: 2rem;
+    gap: 2rem;
+    overflow-x: unset;
+  }
+
+  .teaser-collection article {
+    width: 100%;
+  }
+
+  .teaser-collection img {
+    width: 100%;
+  }
+
+  #teaser-item1 {
+    grid-area: top-left;
+  }
+
+  #teaser-item2 {
+    grid-area: top-right;
+  }
+
+  #teaser-item3 {
+    grid-area: bot-left;
+  }
+
+  #teaser-item4 {
+    grid-area: bot-mid;
+  }
+
+  #teaser-item4 {
+    grid-area: bot-mid;
+  }
+
+  #teaser-item5 {
+    grid-area: bot-right;
+  }
+
+  .swipe {
+    display: none;
+  }
+
+  .form-login {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .anmelden,
+  .registrieren {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .hero-teaser article {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  .swipe {
+    display: none;
+  }
+
+  .teaser-collection img {
+    height: 350px;
+  }
+
+  /* .container-center {
+    margin: 0 auto;
+  } */
+}
+
+@media screen and (min-width: 1400px) {
+  .teaser-collection {
+    grid-template-areas:
+      "top-left top-left top-right top-right top-right top-right"
+      "bot-left bot-left bot-mid bot-mid bot-right bot-right";
+  }
+}
