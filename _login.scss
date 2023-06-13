@@ -1,6 +1,10 @@
 .h1-login {
   text-align: center;
-  margin-top: 3rem;
+  margin: 3rem 0;
+}
+
+h2 {
+  margin: 1rem 0;
 }
 
 .anmelden {
@@ -8,40 +12,67 @@
   flex-direction: column;
 }
 
-form div {
-  display: flex;
-  flex-direction: column;
+form {
+  font-family: ArticulatCF-Bold;
+  margin: 4rem 1rem;
+
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  i {
+    position: absolute;
+    left: 1rem;
+    font-size: 1.1rem;
+  }
+
+  input:not(#check-anmelden) {
+    width: 100%;
+    padding: 0.6rem 0;
+    margin: 0.5rem 0;
+    border: 3px solid var(--global--color-black);
+    border-radius: 30px;
+    font-size: 16px;
+    padding-left: 2.5rem;
+  }
+
+  label {
+    span {
+      color: red;
+      font-weight: bold;
+    }
+  }
+
+  .check {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.5rem;
+
+    input {
+      width: 15px;
+      margin-right: 1rem;
+      margin-left: 1rem;
+    }
+  }
+
+  .icon-relative-container {
+    position: relative;
+    @include center-all();
+  }
+  .btn-anmelden {
+    @include button-standard(200px);
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
 }
 
-.icon-relative-container {
-  position: relative;
+.newsletter {
+  height: 400px;
+  background-color: antiquewhite;
   @include center-all();
-}
 
-form i {
-  position: absolute;
-  left: 1rem;
-  font-size: 1.1rem;
-}
-
-form input {
-  width: 100%;
-  padding: 0.6rem 0;
-  border: 3px solid var(--global--color-black);
-  border-radius: 30px;
-  font-size: 16px;
-  padding-left: 2.5rem;
-}
-
-.check {
-  display: flex;
-  flex-direction: row;
-}
-
-.check input {
-  width: auto;
-}
-
-.btn-anmelden {
-  @include button-standard(200px);
+  h2 {
+    @include big-h2();
+  }
 }

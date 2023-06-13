@@ -263,11 +263,14 @@ h1 {
   gap: 2rem;
 }
 
-.search h2 {
+@mixin big-h2() {
   font-family: ArticulatCF-Bold;
   font-size: 52px;
   text-align: center;
-  width: 100%;
+}
+
+.search h2 {
+  @include big-h2();
 }
 
 .input-wrapper {
@@ -372,6 +375,12 @@ h1 {
   .anmelden,
   .registrieren {
     width: 40%;
+  }
+
+  .disconnector {
+    background-color: black;
+    height: 380px;
+    width: 1px;
   }
 }
 

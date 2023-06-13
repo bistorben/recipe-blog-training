@@ -270,7 +270,6 @@ h1 {
   font-family: ArticulatCF-Bold;
   font-size: 52px;
   text-align: center;
-  width: 100%;
 }
 
 .input-wrapper {
@@ -303,7 +302,11 @@ h1 {
 /* CSS LOGIN */
 .h1-login {
   text-align: center;
-  margin-top: 3rem;
+  margin: 3rem 0;
+}
+
+h2 {
+  margin: 1rem 0;
 }
 
 .anmelden {
@@ -311,43 +314,49 @@ h1 {
   flex-direction: column;
 }
 
+form {
+  font-family: ArticulatCF-Bold;
+  margin: 4rem 1rem;
+}
 form div {
   display: flex;
   flex-direction: column;
 }
-
-.icon-relative-container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 form i {
   position: absolute;
   left: 1rem;
   font-size: 1.1rem;
 }
-
-form input {
+form input:not(#check-anmelden) {
   width: 100%;
   padding: 0.6rem 0;
+  margin: 0.5rem 0;
   border: 3px solid var(--global--color-black);
   border-radius: 30px;
   font-size: 16px;
   padding-left: 2.5rem;
 }
-
-.check {
+form label span {
+  color: red;
+  font-weight: bold;
+}
+form .check {
   display: flex;
   flex-direction: row;
+  margin-top: 0.5rem;
 }
-
-.check input {
-  width: auto;
+form .check input {
+  width: 15px;
+  margin-right: 1rem;
+  margin-left: 1rem;
 }
-
-.btn-anmelden {
+form .icon-relative-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form .btn-anmelden {
   border: 0.2rem solid var(--global--color-black);
   box-shadow: 0.2rem 0.2rem 0 var(--global--color-black);
   border-radius: 10px;
@@ -359,6 +368,21 @@ form input {
   font-family: CF-BoldOblique;
   text-transform: uppercase;
   word-spacing: 0.3rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.newsletter {
+  height: 400px;
+  background-color: antiquewhite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.newsletter h2 {
+  font-family: ArticulatCF-Bold;
+  font-size: 52px;
+  text-align: center;
 }
 
 /* MEDIA QUERIES ------------------------------- */
@@ -416,6 +440,11 @@ form input {
   .anmelden,
   .registrieren {
     width: 40%;
+  }
+  .disconnector {
+    background-color: black;
+    height: 380px;
+    width: 1px;
   }
 }
 @media screen and (min-width: 1000px) {
