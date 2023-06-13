@@ -1,0 +1,255 @@
+header {
+  padding: 3rem 1rem;
+  color: var(--global--color-black);
+
+  i {
+    color: black;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    width: 100px;
+  }
+
+  .burger {
+    font-size: 2.2rem;
+  }
+
+  .logo {
+    width: 90px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  ul a > i {
+    font-size: 18px;
+  }
+}
+
+/* hero teaser */
+/* Todo: check every line of code again */
+
+@mixin border-black() {
+  border: 0.2rem solid var(--global--color-black);
+  box-shadow: 0.2rem 0.2rem 0 var(--global--color-black);
+  border-radius: 10px;
+}
+
+.hero-teaser {
+  @include border-black();
+  overflow: hidden;
+  margin-top: 0;
+  max-width: 1100px;
+  cursor: pointer;
+}
+
+.hero-content-wrapper {
+  padding: 2rem;
+  position: relative;
+  background-color: var(--global--color-linen);
+  z-index: 1;
+  display: flex;
+}
+
+.hero-content {
+  @include center-all();
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hero-teaser img {
+  width: 100%;
+  transition: 0.5s ease;
+}
+
+.hero-teaser img {
+  display: block;
+  /* border-top-right-radius: 10px;
+  border-top-left-radius: 10px; */
+}
+
+.hero-teaser:hover img {
+  transform: scale(1.05);
+  transition: 0.5s ease;
+}
+
+h1 {
+  font-size: 40px;
+  font-family: ArticulatCF-Bold;
+  line-height: 1;
+}
+
+.hero-teaser p {
+  font-family: ArticulatCF-Normal;
+}
+
+/* swipe heading */
+
+.swipe {
+  font-family: CartograpgCF-Bold;
+  font-size: 1.7rem;
+  width: fit-content;
+  margin: 1rem auto;
+  color: #1d0ba8;
+}
+
+.swipe article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.swipe p {
+  font-size: 1rem;
+}
+
+.swipe h2::after {
+  content: "\f0a4";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 1.9rem;
+  margin-left: 1rem;
+}
+
+/* teaser collection */
+
+.teaser-collection {
+  max-width: 1100px;
+  display: flex;
+  gap: 1rem;
+  overflow-x: scroll;
+}
+
+/* ? Ich würde gerne dem arcticle ne feste breite/höhe, statt dem img geben. Was muss ich tun? :) */
+
+.teaser-collection article {
+  height: 100%;
+  overflow: hidden;
+  @include border-black();
+  cursor: pointer;
+}
+
+.teaser-collection article:hover img {
+  transform: scale(1.05);
+  transition: 0.5s ease;
+}
+
+.teaser-collection figure {
+  position: relative;
+}
+
+.teaser-collection img {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  transition: 0.5s ease;
+}
+
+.teaser-collection figcaption {
+  position: absolute;
+  bottom: 0;
+  background-color: #040606;
+  font-family: CartograpgCF-Light;
+  font-size: 10px;
+  color: #fcf7f3;
+  padding: 0.2rem;
+  text-transform: uppercase;
+}
+
+.h2-background {
+  background-color: var(--global--color-linen);
+  // background-color: black;
+  height: 100%;
+  position: relative;
+}
+
+.teaser-collection h2 {
+  font-family: ArticulatCF-Bold;
+  font-size: 1rem;
+  padding: 1.5rem 1rem;
+  line-height: 1;
+  margin: 0;
+}
+
+section.button {
+  @include center-all();
+}
+
+@mixin button-standard($width) {
+  @include border-black();
+  width: $width;
+  background-color: white;
+  margin: 2rem 0;
+  padding: 0.7rem;
+  border-radius: 30px;
+  font-family: CF-BoldOblique;
+  text-transform: uppercase;
+  word-spacing: 0.3rem;
+}
+
+.button > .btn-mehr {
+  @include button-standard(320px);
+}
+
+.btn-mehr::after {
+  content: "\f061";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+
+/* SEARCH -------------------------------------------------------------- */
+
+.search {
+  background-color: var(--global--color-illusion);
+  height: 300px;
+  @include center-all();
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@mixin big-h2() {
+  font-family: ArticulatCF-Bold;
+  font-size: 52px;
+  text-align: center;
+}
+
+.search h2 {
+  @include big-h2();
+}
+
+.input-wrapper {
+  width: 95%;
+  max-width: 900px;
+}
+
+.search .container-relative {
+  @include center-all();
+  position: relative;
+}
+
+.search input {
+  text-align: center;
+  padding: 1rem 0;
+  border: 3px solid var(--global--color-black);
+  border-radius: 30px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.search label {
+  font-size: 1.5rem;
+  position: absolute;
+  left: 1rem;
+}

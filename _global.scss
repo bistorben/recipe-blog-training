@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --global--color-black: #040606;
+  --global--color-grey: grey;
+  --global--color-white: #fff;
+  --global--color-white-50: rbga(255, 255, 0.5);
+  --global--color-white-90: rbga(255, 255, 0.9);
+  --global--color-linen: #fcf7f3;
+  --global--color-pearl-lusta: #fcedd9;
+  --global--color-illusion: #ffb8c2;
+  --global--color-chestnut: #be5a4b;
+  --global--color-flush-orange: #ff8000;
+  --global--color-tomato: tomato;
+  --global--color-neon-blue: #1d0ba8;
+  --global--color-darker-pink: #f9b;
+  --global--color-red-links: #ff667d;
+
+  --spacing-m: 1rem;
+  --spacing-l: 2rem;
+}
+
+body {
+  background-image: url(./images/background.png);
+  background-size: cover;
+}
+
+@mixin center-all() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-center {
+  width: 95%;
+  margin: 0 auto;
+}
