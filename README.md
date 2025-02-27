@@ -1,48 +1,26 @@
-# recipe_longtime_project
+# Responsive Food Blog Landing Page
 
-Die Aufgabe ist es eine Webseite zu erstellen, die aus einer Rezeptseite und einem Formular besteht.
-Wie genau die Seite aussieht ist dir überlassen.
+This project is a responsive website designed to practice HTML, CSS (SCSS), and responsive design. As a reference, I used an existing food blog and recreated its layout to better understand modern web design principles.
 
-## Planung
+## Features
 
-- Erstelle einen Design-Prototypen oder Wireframe mit [Figma](https://www.figma.com/de/), [miro](https://miro.com/de/wireframing/), [ähnlicher](https://webflow.com/blog/prototyping-tools) Software oder per Hand mit Zettel und Stift
-  - Mobile und Desktop Version (Tablet Version ist optional)
-  - Binde deinen Wireframe als Link oder Bild in die Readme.md ein
-  - Bei Bedarf erstelle eine Checkliste mit wichtigen Meilensteinen für dein Projekt
+- Flexible grid layout with media queries
+- Hover animations and scaling effects
+- Custom color and typography system using CSS variables
+- Login and registration forms with checkbox validation
+- Use of SCSS mixins for code reusability
 
-### Beispiel
+## Project Screenshots
 
-- [x] Inhalt planen (welche Art Rezepte nehme ich?)
-- [x] Farben als CSS Variabel anlegen
-- [x] Navigation sticky
-- [ ] Font Awesome Icons im Footer verlinken
-- [ ] Resonsive 600px & 992px for Formular
-- [ ] ...
+![127 0 0 1_5504_](https://github.com/user-attachments/assets/1b08efae-624a-4792-ac24-29cc35b78c34)
 
-## Anforderungen
+![127 0 0 1_5504_ (1)](https://github.com/user-attachments/assets/eca04ba6-580e-4719-a9b9-a22ff9ba262c)
 
-- Die Webseite sollte komplett Responsive sein
-  - Arbeite nach dem Mobile first ansatz (min-width)
-- Es wäre gut eine Rezeptseite und eine Formularseite zu haben
-- Hab Spaß und Teste alles aus, was dir einfällt (eigen Recherche mit unserer Unterstützung)
+![127 0 0 1_5504_ (2)](https://github.com/user-attachments/assets/63ea02d7-cb9a-4f32-854a-9f9066549a4f)
 
-## Freiwillig
+![127 0 0 1_5504_login html](https://github.com/user-attachments/assets/4cccbef4-628e-4f46-9ca2-f4018139fe6e)
 
-- Teste deiner Webseite am Ende mit Lighthouse (Mobile & Desktop)
-- Die Verwendung von Grid oder Flexbox ist euch Überlassen
-  - ihr könnt auch auf der einen Seite grid und auf der anderen Flexbox verwenden 
+![127 0 0 1_5504_login html (1)](https://github.com/user-attachments/assets/9ef6cb53-e7b0-4283-b9a2-6c5503e0315c)
 
-## Nice to know und Wiederholungen
+![127 0 0 1_5504_login html (2)](https://github.com/user-attachments/assets/bffe0f7f-2bff-40cb-af53-dd8601f587a5)
 
-- [Was ist UX?](https://www.youtube.com/watch?v=_G7KRF0Jlmk&ab_channel=IndraBurkart)
-- [Wie macht man einen Wireframe?](https://www.youtube.com/watch?v=mbnrta-BK1w&ab_channel=IndraBurkart)
-- [Figma Frames](https://www.youtube.com/watch?v=OwB_YDPx2gY&ab_channel=IndraBurkart)
-
-
-## My Wireframe
-
-...
-
-## My Checklist
-
-...
